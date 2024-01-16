@@ -1,2 +1,48 @@
-<script src="./quiz-app.js"></script>
-<style src="./quiz-app.css"></style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Login</title>
+</head>
+<body>
+    <h2>Login</h2>
+    
+    <form id="loginForm" action="javascript:login()">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br>
+
+        <button type="submit">Login</button>
+    </form>
+
+    <div id="quizTopics" style="display: none;">
+        <h2>Quiz Topics</h2>
+        <ul>
+            <li><a href="javascript:selectQuiz(1)">Database Management System</a></li>
+            <li><a href="javascript:selectQuiz(2)">Data Structures and Algorithm</a></li>
+            <li><a href="javascript:selectQuiz(3)">Computer Organization and Architecture</a></li>
+            <li><a href="javascript:selectQuiz(4)">Graph Theory and Linear Algebra</a></li>
+            <li><a href="javascript:selectQuiz(5)">Discrete Mathematical Structures</a></li>
+        </ul>
+    </div>
+
+    <script>
+        function login() {
+            // Use APEX APIs or AJAX to authenticate the user
+            // Upon successful login, show the quiz topics
+            document.getElementById("loginForm").style.display = "none";
+            document.getElementById("quizTopics").style.display = "block";
+        }
+
+        function selectQuiz(quizId) {
+            // Redirect or perform actions based on the selected quiz
+            // You can use APEX APIs to manage the quiz selection
+            alert("Selected Quiz ID: " + quizId);
+        }
+    </script>
+</body>
+</html>
